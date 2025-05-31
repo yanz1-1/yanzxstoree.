@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f4f4f4;
+    }
+    .header {
+      background-color: #6C3DF4;
+      color: white;
+      padding: 40px 20px;
+      border-bottom-left-radius: 40px;
+    }
+    .header h2 {
+      margin: 10px 0 5px;
+    }
+    .header p a {
+      color: white;
+      text-decoration: underline;
+    }
+    .container {
+      margin: -30px auto 0;
+      max-width: 400px;
+      background: white;
+      padding: 30px 20px;
+      border-radius: 15px;
+    }
+    input, button {
+      width: 100%;
+      padding: 12px;
+      margin-top: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+    .btn-login {
+      background-color: #6C3DF4;
+      color: white;
+      border: none;
+    }
+    .btn-guest {
+      background-color: white;
+      color: #6C3DF4;
+      border: 2px solid #6C3DF4;
+    }
+    .forgot {
+      text-align: right;
+      font-size: 14px;
+      margin-top: 5px;
+    }
+    .forgot a {
+      color: #6C3DF4;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h2>Welcome</h2>
+    <p>Don't have an account? <a href="#">Create Account</a></p>
+  </div>
+
+  <div class="container">
+    <form onsubmit="event.preventDefault(); window.location.href='dashboard.html';">
+      <input type="text" placeholder="Enter Username or Email" required>
+      <input type="password" placeholder="Enter Password" required>
+      <div class="forgot"><a href="#">Forgot Password?</a></div>
+      <button class="btn-login" type="submit">Login</button>
+      <button class="btn-guest" type="button" onclick="window.location.href='dashboard.html'">GUEST LOGIN</button>
+    </form>
+  </div>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+    }
+    .header {
+      background: #6C3DF4;
+      padding: 20px;
+      color: white;
+      position: relative;
+      border-bottom-left-radius: 40px;
+    }
+    .wallet {
+      background: white;
+      margin: 20px;
+      padding: 15px;
+      border-radius: 12px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.05);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .search {
+      margin: 0 20px 10px;
+    }
+    .search input {
+      width: 100%;
+      padding: 12px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+    }
+    .services {
+      margin: 0 20px;
+    }
+    .service-item {
+      background: white;
+      padding: 10px;
+      border-radius: 10px;
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .service-name {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .badge-sale {
+      background: red;
+      color: white;
+      padding: 2px 8px;
+      border-radius: 10px;
+      font-size: 12px;
+    }
+    .badge-active {
+      background: #c8f7c5;
+      color: green;
+      padding: 2px 8px;
+      border-radius: 10px;
+      font-size: 12px;
+    }
+    .footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background: white;
+      border-top: 1px solid #ddd;
+      display: flex;
+      justify-content: space-around;
+      padding: 10px 0;
+    }
+    .footer div {
+      text-align: center;
+      font-size: 12px;
+      color: #555;
+    }
+    .deposit-button {
+      background: #6C3DF4;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 50%;
+      position: absolute;
+      left: 50%;
+      bottom: 40px;
+      transform: translateX(-50%);
+      font-size: 12px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h3>Guest Wallet</h3>
+    <div class="wallet">
+      <span>💰 1.000,000 / $1.00</span>
+      <button>↩</button>
+    </div>
+  </div>
+
+  <div class="search">
+    <input type="text" placeholder="Search Services">
+  </div>
+
+  <div class="services">
+    <div class="service-item">
+      <div class="service-name">
+        <img src="https://via.placeholder.com/30" alt="">
+        Aplikasi Lainnya
+      </div>
+      <div>
+        <span class="badge-sale">SALE</span>
+        <span class="badge-active">Active</span>
+      </div>
+    </div>
+
+    <div class="service-item">
+      <div class="service-name">
+        <img src="https://via.placeholder.com/30" alt="">
+        Bata
+      </div>
+      <div>
+        <span class="badge-sale">SALE</span>
+        <span class="badge-active">Active</span>
+      </div>
+    </div>
+
+    <div class="service-item">
+      <div class="service-name">
+        <img src="https://via.placeholder.com/30" alt="">
+        MyGo
+      </div>
+      <div>
+        <span class="badge-sale">SALE</span>
+        <span class="badge-active">Active</span>
+      </div>
+    </div>
+    
+    <!-- Tambah layanan lainnya jika perlu -->
+  </div>
+
+  <div class="deposit-button">Deposit</div>
+
+  <div class="footer">
+    <div>Home</div>
+    <div>Transaction</div>
+    <div>Wallet</div>
+    <div>Account</div>
+  </div>
+
+</body>
+</html>
