@@ -3,34 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Efek Animasi Hidup</title>
+  <title>YANZX STOREE</title>
   <style>
     body {
       margin: 0;
       height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
       background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
       font-family: 'Segoe UI', sans-serif;
       overflow: hidden;
     }
 
     .animasi-hidup {
-      font-size: 3rem;
+      font-size: 2rem;
       font-weight: bold;
+      text-align: center;
+      padding: 20px;
       color: #fff;
       text-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
       animation: berdenyut 2s infinite, warnaBerubah 5s infinite alternate;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
     }
 
     @keyframes berdenyut {
       0%, 100% {
-        transform: scale(1);
+        transform: translateX(-50%) scale(1);
         text-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
       }
       50% {
-        transform: scale(1.1);
+        transform: translateX(-50%) scale(1.1);
         text-shadow: 0 0 20px #0ff, 0 0 40px #0ff;
       }
     }
@@ -45,6 +48,6 @@
   </style>
 </head>
 <body>
-  <div class="animasi-hidup">Saya Hidup!</div>
+  <div class="animasi-hidup">SELAMAT DATANG DI WEBSITE<br>YANZX STOREE</div>
 </body>
 </html>
