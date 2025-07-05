@@ -3,167 +3,162 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>YANZX STOREE</title>
+  <title>Top Up Semua Game</title>
   <style>
     body {
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
       margin: 0;
-      height: 100vh;
-      background: #0f2027;
-      overflow-x: hidden;
-      font-family: 'Segoe UI', sans-serif;
-      color: #00ffff;
+      padding: 0;
     }
-
-    #particles-js {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-    }
-
-    .judul {
-      position: absolute;
-      top: 20px;
-      left: 50%;
-      transform: translateX(-50%);
-      text-align: center;
-    }
-
-    .judul h1 {
-      font-size: 1rem;
-      margin: 0;
-      text-shadow: 0 0 6px #0ff, 0 0 12px #0ff;
-    }
-
-    .judul h2 {
-      font-size: 1.3rem;
-      margin: 5px 0;
-      font-weight: bold;
-      text-shadow: 0 0 8px #0ff, 0 0 15px #0ff;
-    }
-
-    .typing-text {
-      font-size: 1rem;
-      margin-top: 10px;
-      color: #ffcc00;
-      text-shadow: 0 0 6px #ffcc00;
-    }
-
-    .wa-button {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 12px 20px;
-      background-color: #25D366;
+    header {
+      background: #00796b;
       color: white;
-      text-decoration: none;
-      border-radius: 30px;
-      font-weight: bold;
-      font-size: 14px;
-      box-shadow: 0 0 10px #25D366, 0 0 20px #25D366;
-      transition: 0.3s ease;
-      animation: pulse 2s infinite;
-    }
-
-    .wa-button:hover {
-      background-color: #1ebc5e;
-      box-shadow: 0 0 20px #25D366;
-    }
-
-    @keyframes pulse {
-      0%, 100% { transform: scale(1); }
-      50% { transform: scale(1.05); }
-    }
-
-    .produk-container {
-      margin-top: 40px;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      align-items: center;
-    }
-
-    .produk-box {
-      background-color: rgba(255, 255, 255, 0.05);
-      border: 1px solid #00ffff;
-      padding: 12px 20px;
-      border-radius: 12px;
-      width: 220px;
+      padding: 20px;
       text-align: center;
-      font-weight: bold;
-      color: #ffffff;
-      box-shadow: 0 0 10px #0ff;
-      transition: 0.3s ease;
     }
-
-    .produk-box:hover {
-      background-color: rgba(0, 255, 255, 0.1);
-      box-shadow: 0 0 20px #00ffff;
-      transform: scale(1.05);
+    .banner {
+      width: 100%;
+      display: block;
+      margin: 0 auto;
+    }
+    .search-bar {
+      padding: 20px;
+      text-align: center;
+    }
+    .search-bar input {
+      width: 80%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 20px;
+    }
+    .filters {
+      text-align: center;
+      margin: 10px 0;
+    }
+    .filters button {
+      background: #e0e0e0;
+      border: none;
+      margin: 5px;
+      padding: 10px 15px;
+      border-radius: 20px;
       cursor: pointer;
+    }
+    .game-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+      gap: 15px;
+      padding: 20px;
+    }
+    .game-item {
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      text-align: center;
+      cursor: pointer;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+    }
+    .game-item:hover {
+      transform: translateY(-5px);
+    }
+    .game-item img {
+      width: 100%;
+      height: auto;
+    }
+    .game-item p {
+      margin: 10px 0;
+      padding: 0 5px;
+      font-weight: bold;
     }
   </style>
 </head>
 <body>
-  <div id="particles-js"></div>
 
-  <div class="judul">
-    <h1>Selamat datang di website</h1>
-    <h2>YANZX STOREE</h2>
-    <div class="typing-text" id="typing"></div>
+  <header>
+    <h1>Powered by Okegaming</h1>
+  </header>
 
-    <a class="wa-button" href="https://wa.me/6283866943723" target="_blank">
-      💬 Hubungi Admin via WhatsApp
-    </a>
+  <img src="banner.jpg" alt="Banner Promo" class="banner">
 
-    <div class="produk-container">
-      <div class="produk-box">💎 Diamond Free Fire</div>
-      <div class="produk-box">🛒 Akun Mobile Legends</div>
-      <div class="produk-box">⚡ Jasa Top Up Game</div>
-      <div class="produk-box">🎮 Jasa Joki Free Fire</div>
-      <div class="produk-box">💰 Top Up Diamond Game</div>
+  <div class="search-bar">
+    <input type="text" placeholder="Cari game disini ...">
+  </div>
+
+  <div class="filters">
+    <button>Lagi Populer</button>
+    <button>Baru Rilis</button>
+    <button>Topup Langsung</button>
+    <button>Voucher</button>
+    <button>Entertainment</button>
+  </div>
+
+  <div class="game-grid">
+    <div class="game-item">
+      <img src="aov.jpg" alt="Arena of Valor">
+      <p>Arena of Valor</p>
+    </div>
+    <div class="game-item">
+      <img src="coc.jpg" alt="Clash of Clans">
+      <p>Clash of Clans</p>
+    </div>
+    <div class="game-item">
+      <img src="codm.jpg" alt="Call of Duty Mobile">
+      <p>Call of Duty Mobile</p>
+    </div>
+    <div class="game-item">
+      <img src="cr.jpg" alt="Clash Royale">
+      <p>Clash Royale</p>
+    </div>
+    <div class="game-item">
+      <img src="freefire.jpg" alt="Free Fire">
+      <p>Free Fire</p>
+    </div>
+    <div class="game-item">
+      <img src="genshin.jpg" alt="Genshin Impact">
+      <p>Genshin Impact</p>
+    </div>
+    <div class="game-item">
+      <img src="higgsdomino.jpg" alt="Higgs Domino">
+      <p>Higgs Domino</p>
+    </div>
+    <div class="game-item">
+      <img src="hsr.jpg" alt="Honkai Star Rail">
+      <p>Honkai Star Rail</p>
+    </div>
+    <div class="game-item">
+      <img src="lostsaga.jpg" alt="Lost Saga">
+      <p>Lost Saga</p>
+    </div>
+    <div class="game-item">
+      <img src="ml.jpg" alt="Mobile Legends">
+      <p>Mobile Legends</p>
+    </div>
+    <div class="game-item">
+      <img src="pb.jpg" alt="Point Blank">
+      <p>Point Blank</p>
+    </div>
+    <div class="game-item">
+      <img src="pubg.jpg" alt="PUBG Mobile">
+      <p>PUBG Mobile</p>
+    </div>
+    <div class="game-item">
+      <img src="ragnarok.jpg" alt="Ragnarok M">
+      <p>Ragnarok M</p>
+    </div>
+    <div class="game-item">
+      <img src="roblox.jpg" alt="Roblox">
+      <p>Roblox</p>
+    </div>
+    <div class="game-item">
+      <img src="sausageman.jpg" alt="Sausage Man">
+      <p>Sausage Man</p>
+    </div>
+    <div class="game-item">
+      <img src="valorant.jpg" alt="Valorant">
+      <p>Valorant</p>
     </div>
   </div>
 
-  <!-- Script Ketik -->
-  <script>
-    const teks = "Kami menyediakan akun, jasa dan produk digital terbaik.";
-    let i = 0;
-    function ketik() {
-      if (i < teks.length) {
-        document.getElementById("typing").innerHTML += teks.charAt(i);
-        i++;
-        setTimeout(ketik, 80);
-      }
-    }
-    ketik();
-  </script>
-
-  <!-- Script Partikel -->
-  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-  <script>
-    particlesJS("particles-js", {
-      particles: {
-        number: { value: 80 },
-        color: { value: "#ffffff" },
-        shape: { type: "star" },
-        opacity: { value: 0.5 },
-        size: { value: 2 },
-        move: {
-          enable: true,
-          speed: 1,
-          direction: "none",
-          out_mode: "out"
-        }
-      },
-      interactivity: {
-        events: {
-          onhover: { enable: true, mode: "repulse" }
-        }
-      },
-      retina_detect: true
-    });
-  </script>
 </body>
 </html>
