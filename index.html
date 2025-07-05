@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>YANZX STOREE</title>
   <style>
     body {
@@ -13,32 +13,43 @@
       overflow: hidden;
     }
 
-    .animasi-hidup {
-      font-size: 2rem;
-      font-weight: bold;
-      text-align: center;
-      padding: 20px;
-      color: #fff;
-      text-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
-      animation: berdenyut 2s infinite, warnaBerubah 5s infinite alternate;
+    .judul {
       position: absolute;
-      top: 0;
+      top: 20px;
       left: 50%;
       transform: translateX(-50%);
+      text-align: center;
+      animation: slowPulse 6s infinite ease-in-out, colorFade 10s infinite alternate;
     }
 
-    @keyframes berdenyut {
+    .judul h1, .judul h2 {
+      margin: 0;
+      padding: 5px;
+      color: #00ffff;
+      text-shadow: 0 0 10px #0ff, 0 0 25px #0ff;
+    }
+
+    .judul h1 {
+      font-size: 2rem;
+    }
+
+    .judul h2 {
+      font-size: 2.5rem;
+      font-weight: bold;
+    }
+
+    @keyframes slowPulse {
       0%, 100% {
         transform: translateX(-50%) scale(1);
         text-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
       }
       50% {
-        transform: translateX(-50%) scale(1.1);
+        transform: translateX(-50%) scale(1.08);
         text-shadow: 0 0 20px #0ff, 0 0 40px #0ff;
       }
     }
 
-    @keyframes warnaBerubah {
+    @keyframes colorFade {
       0% { color: #00ffff; }
       25% { color: #00ff99; }
       50% { color: #ffcc00; }
@@ -48,6 +59,9 @@
   </style>
 </head>
 <body>
-  <div class="animasi-hidup">SELAMAT DATANG DI WEBSITE<br>YANZX STOREE</div>
+  <div class="judul">
+    <h1>Selamat datang di website</h1>
+    <h2>YANZX STOREE</h2>
+  </div>
 </body>
 </html>
