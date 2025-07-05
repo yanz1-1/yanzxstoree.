@@ -1,18 +1,21 @@
+
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Top Up Semua Game & Voucher</title>
+  <title>Top Up Semua Game</title>
   <style>
     body {
       font-family: Arial, sans-serif;
       background: #f5f5f5;
       margin: 0;
+      padding: 0;
     }
     header {
       background: #00796b;
-      color: #fff;
+      color: white;
       padding: 20px;
       text-align: center;
     }
@@ -42,9 +45,6 @@
       border-radius: 20px;
       cursor: pointer;
     }
-    h2 {
-      padding: 0 20px;
-    }
     .slider {
       overflow-x: auto;
       display: flex;
@@ -54,7 +54,7 @@
     .slider-item {
       flex: 0 0 auto;
       width: 150px;
-      background: #fff;
+      background: white;
       border-radius: 10px;
       text-align: center;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -68,7 +68,7 @@
     .slider-item p {
       margin: 10px 0;
       padding: 0 5px;
-      font-weight: 600;
+      font-weight: bold;
     }
   </style>
 </head>
@@ -78,7 +78,7 @@
     <h1>Powered by Okegaming</h1>
   </header>
 
-  <img src="https://via.placeholder.com/1200x300?text=Banner+Promo" alt="Banner Promo" class="banner">
+  <img src="banner.jpg" alt="Banner Promo" class="banner">
 
   <div class="search-bar">
     <input type="text" placeholder="Cari game disini ...">
@@ -92,70 +92,32 @@
     <button>Entertainment</button>
   </div>
 
-  <!-- SLIDER 1: BARU RILIS -->
-  <h2>Baru Rilis</h2>
+  <!-- ✅ SATU SLIDER GABUNGAN -->
   <div class="slider">
+    <!-- Baru Rilis -->
     <div class="slider-item"><img src="arena_breakout.jpg" alt="Arena Breakout"><p>Arena Breakout</p></div>
     <div class="slider-item"><img src="alchemy_stars.jpg" alt="Alchemy Stars"><p>Alchemy Stars</p></div>
     <div class="slider-item"><img src="age_empires.jpg" alt="Age of Empires Mobile"><p>Age of Empires</p></div>
-    <div class="slider-item"><img src="age_apes.jpg" alt="Age of Apes"><p>Age of Apes</p></div>
-    <div class="slider-item"><img src="archeage_war.jpg" alt="ArcheAge War"><p>ArcheAge War</p></div>
-    <div class="slider-item"><img src="colorbang.jpg" alt="ColorBANG"><p>ColorBANG</p></div>
-    <div class="slider-item"><img src="draconia.jpg" alt="Draconia Saga"><p>Draconia Saga</p></div>
-    <div class="slider-item"><img src="modern_strike.jpg" alt="Modern Strike"><p>Modern Strike</p></div>
-    <div class="slider-item"><img src="night_crows.jpg" alt="Night Crows"><p>Night Crows</p></div>
-    <div class="slider-item"><img src="the_ants.jpg" alt="The Ants"><p>The Ants</p></div>
-  </div>
 
-  <!-- SLIDER 2: TOPUP LANGSUNG -->
-  <h2>Topup Langsung</h2>
-  <div class="slider">
+    <!-- Topup Langsung -->
     <div class="slider-item"><img src="ace_racer.jpg" alt="Ace Racer"><p>Ace Racer</p></div>
     <div class="slider-item"><img src="afk_journey.jpg" alt="AFK Journey"><p>AFK Journey</p></div>
-    <div class="slider-item"><img src="astral_guardians.jpg" alt="Astral Guardians"><p>Astral Guardians</p></div>
     <div class="slider-item"><img src="astra_knights.jpg" alt="Astra: Knights of Veda"><p>Astra: Knights of Veda</p></div>
-    <div class="slider-item"><img src="aov.jpg" alt="Arena of Valor"><p>Arena of Valor</p></div>
-    <div class="slider-item"><img src="be_the_king.jpg" alt="Be The King"><p>Be The King</p></div>
-    <div class="slider-item"><img src="eggy_party.jpg" alt="Eggy Party"><p>Eggy Party</p></div>
-    <div class="slider-item"><img src="free_fire_global.jpg" alt="Free Fire Global"><p>Free Fire Global</p></div>
-    <div class="slider-item"><img src="garena_undawn.jpg" alt="Garena Undawn"><p>Garena Undawn</p></div>
-    <div class="slider-item"><img src="isekai_feast.jpg" alt="Isekai Feast"><p>Isekai Feast</p></div>
-    <div class="slider-item"><img src="mango_live.jpg" alt="Mango Live"><p>Mango Live</p></div>
-    <div class="slider-item"><img src="nba_infinite.jpg" alt="NBA INFINITE"><p>NBA INFINITE</p></div>
-  </div>
 
-  <!-- SLIDER 3: VOUCHER -->
-  <h2>Voucher</h2>
-  <div class="slider">
+    <!-- Voucher -->
     <div class="slider-item"><img src="blizzard.jpg" alt="Blizzard Gift Card"><p>Blizzard Gift Card</p></div>
     <div class="slider-item"><img src="baldurs_gate.jpg" alt="Baldur's Gate 3"><p>Baldur's Gate 3</p></div>
     <div class="slider-item"><img src="candy_crush.jpg" alt="Candy Crush Saga"><p>Candy Crush Saga</p></div>
-    <div class="slider-item"><img src="conquer_online.jpg" alt="Conquer Online – Point Card"><p>Conquer Online</p></div>
-    <div class="slider-item"><img src="diablo.jpg" alt="Diablo IV"><p>Diablo IV</p></div>
-    <div class="slider-item"><img src="ea_fc.jpg" alt="EA Sports FC 24"><p>EA Sports FC 24</p></div>
-    <div class="slider-item"><img src="efootball.jpg" alt="eFootball"><p>eFootball</p></div>
-    <div class="slider-item"><img src="exitlag.jpg" alt="ExitLag"><p>ExitLag</p></div>
-    <div class="slider-item"><img src="gta_v.jpg" alt="GTA V"><p>GTA V</p></div>
-    <div class="slider-item"><img src="heroes_evolved.jpg" alt="Heroes Evolved"><p>Heroes Evolved</p></div>
-    <div class="slider-item"><img src="like_a_dragon.jpg" alt="Like a Dragon: Infinite Wealth"><p>Like a Dragon</p></div>
-  </div>
 
-  <!-- SLIDER 4: ENTERTAINMENT -->
-  <h2>Entertainment</h2>
-  <div class="slider">
+    <!-- Entertainment -->
     <div class="slider-item"><img src="bstation.jpg" alt="Bstation"><p>Bstation / Bilibili</p></div>
-    <div class="slider-item"><img src="elelive.jpg" alt="Elelive"><p>Elelive</p></div>
-    <div class="slider-item"><img src="firefly.jpg" alt="Firefly Live"><p>Firefly Live</p></div>
-    <div class="slider-item"><img src="genflix.jpg" alt="Genflix"><p>Genflix</p></div>
-    <div class="slider-item"><img src="lita.jpg" alt="Lita"><p>Lita</p></div>
-    <div class="slider-item"><img src="livu.jpg" alt="LivU"><p>LivU</p></div>
-    <div class="slider-item"><img src="mangatoon.jpg" alt="Mangatoon"><p>Mangatoon</p></div>
-    <div class="slider-item"><img src="mika.jpg" alt="MIKA Chat Coins"><p>MIKA Chat Coins</p></div>
-    <div class="slider-item"><img src="mico.jpg" alt="Mico Live"><p>Mico Live</p></div>
     <div class="slider-item"><img src="netflix.jpg" alt="Netflix"><p>Netflix</p></div>
-    <div class="slider-item"><img src="papaya.jpg" alt="Papaya Live"><p>Papaya Live</p></div>
-    <div class="slider-item"><img src="sushiroll.jpg" alt="Sushiroll"><p>Sushiroll</p></div>
+    <div class="slider-item"><img src="viu.jpg" alt="Viu"><p>Viu</p></div>
   </div>
 
 </body>
 </html>
+
+
+
+  
