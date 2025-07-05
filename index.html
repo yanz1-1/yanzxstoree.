@@ -8,9 +8,19 @@
     body {
       margin: 0;
       height: 100vh;
-      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      background: #0f2027;
+      overflow-x: hidden;
       font-family: 'Segoe UI', sans-serif;
-      overflow: hidden;
+      color: #00ffff;
+    }
+
+    #particles-js {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
     }
 
     .judul {
@@ -19,49 +29,141 @@
       left: 50%;
       transform: translateX(-50%);
       text-align: center;
-      animation: slowPulse 6s infinite ease-in-out, colorFade 10s infinite alternate;
-    }
-
-    .judul h1, .judul h2 {
-      margin: 0;
-      padding: 5px;
-      color: #00ffff;
-      text-shadow: 0 0 6px #0ff, 0 0 10px #0ff;
     }
 
     .judul h1 {
       font-size: 1rem;
+      margin: 0;
+      text-shadow: 0 0 6px #0ff, 0 0 12px #0ff;
     }
 
     .judul h2 {
       font-size: 1.3rem;
+      margin: 5px 0;
       font-weight: bold;
+      text-shadow: 0 0 8px #0ff, 0 0 15px #0ff;
     }
 
-    @keyframes slowPulse {
-      0%, 100% {
-        transform: translateX(-50%) scale(1);
-        text-shadow: 0 0 6px #0ff, 0 0 12px #0ff;
-      }
-      50% {
-        transform: translateX(-50%) scale(1.05);
-        text-shadow: 0 0 12px #0ff, 0 0 20px #0ff;
-      }
+    .typing-text {
+      font-size: 1rem;
+      margin-top: 10px;
+      color: #ffcc00;
+      text-shadow: 0 0 6px #ffcc00;
     }
 
-    @keyframes colorFade {
-      0% { color: #00ffff; }
-      25% { color: #00ff99; }
-      50% { color: #ffcc00; }
-      75% { color: #ff66cc; }
-      100% { color: #00ffff; }
+    .wa-button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 20px;
+      background-color: #25D366;
+      color: white;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: bold;
+      font-size: 14px;
+      box-shadow: 0 0 10px #25D366, 0 0 20px #25D366;
+      transition: 0.3s ease;
+      animation: pulse 2s infinite;
+    }
+
+    .wa-button:hover {
+      background-color: #1ebc5e;
+      box-shadow: 0 0 20px #25D366;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+
+    .produk-container {
+      margin-top: 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .produk-box {
+      background-color: rgba(255, 255, 255, 0.05);
+      border: 1px solid #00ffff;
+      padding: 12px 20px;
+      border-radius: 12px;
+      width: 220px;
+      text-align: center;
+      font-weight: bold;
+      color: #ffffff;
+      box-shadow: 0 0 10px #0ff;
+      transition: 0.3s ease;
+    }
+
+    .produk-box:hover {
+      background-color: rgba(0, 255, 255, 0.1);
+      box-shadow: 0 0 20px #00ffff;
+      transform: scale(1.05);
+      cursor: pointer;
     }
   </style>
 </head>
 <body>
+  <div id="particles-js"></div>
+
   <div class="judul">
     <h1>Selamat datang di website</h1>
     <h2>YANZX STOREE</h2>
+    <div class="typing-text" id="typing"></div>
+
+    <a class="wa-button" href="https://wa.me/6283866943723" target="_blank">
+      💬 Hubungi Admin via WhatsApp
+    </a>
+
+    <div class="produk-container">
+      <div class="produk-box">💎 Diamond Free Fire</div>
+      <div class="produk-box">🛒 Akun Mobile Legends</div>
+      <div class="produk-box">⚡ Jasa Top Up Game</div>
+      <div class="produk-box">🎮 Jasa Joki Free Fire</div>
+      <div class="produk-box">💰 Top Up Diamond Game</div>
+    </div>
   </div>
+
+  <!-- Script Ketik -->
+  <script>
+    const teks = "Kami menyediakan akun, jasa dan produk digital terbaik.";
+    let i = 0;
+    function ketik() {
+      if (i < teks.length) {
+        document.getElementById("typing").innerHTML += teks.charAt(i);
+        i++;
+        setTimeout(ketik, 80);
+      }
+    }
+    ketik();
+  </script>
+
+  <!-- Script Partikel -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script>
+    particlesJS("particles-js", {
+      particles: {
+        number: { value: 80 },
+        color: { value: "#ffffff" },
+        shape: { type: "star" },
+        opacity: { value: 0.5 },
+        size: { value: 2 },
+        move: {
+          enable: true,
+          speed: 1,
+          direction: "none",
+          out_mode: "out"
+        }
+      },
+      interactivity: {
+        events: {
+          onhover: { enable: true, mode: "repulse" }
+        }
+      },
+      retina_detect: true
+    });
+  </script>
 </body>
 </html>
