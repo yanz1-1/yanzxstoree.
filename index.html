@@ -106,3 +106,92 @@
 
 </body>
 </html>
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Yanzxstoree</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: orange;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 20px;
+      color: #333;
+    }
+
+    .menu-icon {
+      font-size: 30px;
+      cursor: pointer;
+    }
+
+    .menu {
+      display: none;
+      flex-direction: column;
+      background-color: orange;
+      position: absolute;
+      top: 60px; /* menyesuaikan header */
+      right: 20px;
+      border-radius: 8px;
+      padding: 10px 0;
+    }
+
+    .menu a {
+      padding: 10px 20px;
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+
+    .menu a:hover {
+      background-color: #f0f0f0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>YANZX STOREE</h1>
+    <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+    <div class="menu" id="menu">
+      <a href="#beranda">Beranda</a>
+      <a href="#hubungi">Hubungi Penjual</a>
+    </div>
+  </header>
+
+  <!-- Konten utama -->
+  <section id="beranda" style="padding: 20px;">
+    <h2>Hai! Saya Yanzxstoree.</h2>
+    <p>Konten perkenalan kamu di sini...</p>
+  </section>
+
+  <section id="hubungi" style="padding: 20px;">
+    <h2>Hubungi Penjual</h2>
+    <p>Masukkan detail kontak di sini atau link ke Instagram / WhatsApp.</p>
+  </section>
+
+  <script>
+    function toggleMenu() {
+      var menu = document.getElementById("menu");
+      if (menu.style.display === "flex") {
+        menu.style.display = "none";
+      } else {
+        menu.style.display = "flex";
+      }
+    }
+  </script>
+</body>
+</html>
