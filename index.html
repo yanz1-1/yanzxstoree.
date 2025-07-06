@@ -1,153 +1,90 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <title>Yanzxstoree</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #f0f0f0;
-    }
-    .container {
-      background-color: #f4ad31;
-      max-width: 1000px;
-      margin: 50px auto;
-      padding: 40px;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      color: #1f331f;
-      text-align: left;
-    }
-    h1 {
-      margin: 0;
-      font-size: 36px;
-      line-height: 1.2;
-    }
-    h1 span {
-      color: #d44a1e;
-    }
-    .dotted {
-      border-top: 3px dotted #1f331f;
-      width: 80%;
-      margin: 20px 0;
-    }
-    p {
-      font-size: 14px;
-      line-height: 1.6;
-      margin: 10px 0;
-    }
-    .social-title {
-      margin-top: 20px;
-      font-weight: bold;
-      font-size: 14px;
-    }
-    .social-links {
-      margin-top: 10px;
-    }
-    .social-item {
-      display: inline-block;
-      text-align: center;
-      margin-right: 20px;
-    }
-    .social-item p {
-      margin: 5px 0;
-      font-weight: bold;
-      font-size: 13px;
-    }
-    .social-item a img {
-      width: 35px;
-      height: 35px;
-      transition: transform 0.3s;
-    }
-    .social-item a img:hover {
-      transform: scale(1.1);
-    }
-    .photo {
-      margin-top: 20px;
-      text-align: center;
-    }
-    .photo img {
-      max-width: 250px;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    }
-  </style>
-</head>
-<body>
-
-  <div class="container">
-    <h1><span>HAI!</span><br>SAYA YANZXSTOREE.</h1>
-    <div class="dotted"></div>
-    <p>Saya adalah seorang pengusaha sekaligus penjual online yang berdomisili di Jawa Tengah. Saya fokus di bidang <strong>jual beli akun</strong>, mulai dari akun media sosial, akun game, hingga akun platform lainnya yang terpercaya dan siap pakai.</p>
-    <p>Dengan pengalaman lebih dari 4 tahun di dunia digital, saya telah membantu ribuan pelanggan mendapatkan akun yang sesuai kebutuhan mereka, baik untuk keperluan bisnis, branding, maupun hobi.</p>
-    <p>Saya selalu mengutamakan <strong>keamanan, keaslian, dan kenyamanan transaksi</strong>, sehingga para pelanggan bisa merasa tenang dan puas dalam setiap pembelian.</p>
-    <p>Selain menjual, saya juga menyediakan layanan konsultasi untuk membantu pelanggan memilih akun yang tepat sesuai tujuan mereka. Saya aktif bekerja sama dengan berbagai marketplace, forum, dan platform digital terpercaya, serta terus memperluas jaringan agar dapat menjangkau lebih banyak pelanggan di seluruh Indonesia.</p>
-    
-    <div class="photo">
-      <img src="https://files.catbox.moe/ci91jn.jpg" alt="Yanzxstoree">
-    </div>
-
-    <div class="social-links">
-      <div class="social-item">
-        <p>INSTAGRAM</p>
-        <a href="https://instagram.com/yanzxstoree1" target="_blank">
-          <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram">
-        </a>
-      </div>
-      <div class="social-item">
-        <p>WHATSAPP</p>
-        <a href="https://wa.me/6288221494446" target="_blank">
-          <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
-        </a>
-      </div>
-    </div>
-  </div>
-
-</body>
-</html>
-
-<!DOCTYPE html>
-<html lang="id">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Yanzxstoree</title>
   <style>
     body {
       font-family: sans-serif;
       margin: 0;
       padding: 0;
+      background-color: #f6f6f6;
     }
 
-    header {
+    .container {
+      max-width: 700px;
+      margin: auto;
       background-color: orange;
-      padding: 10px 20px;
+      padding: 20px;
+      border-radius: 10px;
+      box-sizing: border-box;
+    }
+
+    h1 {
+      margin-top: 0;
+    }
+
+    h1 span {
+      color: red;
+    }
+
+    .dotted {
+      border-top: 3px dotted #333;
+      margin: 15px 0;
+    }
+
+    p {
+      line-height: 1.6;
+    }
+
+    .photo {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .photo img {
+      max-width: 250px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    .social-links {
       display: flex;
-      justify-content: space-between;
-      align-items: center;
+      justify-content: center;
+      margin-top: 20px;
+      gap: 20px;
     }
 
-    header h1 {
-      margin: 0;
-      font-size: 20px;
-      color: #333;
+    .social-item {
+      text-align: center;
     }
 
+    .social-item img {
+      width: 40px;
+      height: 40px;
+    }
+
+    /* Menu styles */
     .menu-icon {
+      position: fixed;
+      top: 15px;
+      right: 20px;
       font-size: 30px;
       cursor: pointer;
+      z-index: 1000;
     }
 
     .menu {
       display: none;
       flex-direction: column;
-      background-color: orange;
-      position: absolute;
-      top: 60px; /* menyesuaikan header */
+      position: fixed;
+      top: 55px;
       right: 20px;
+      background-color: orange;
       border-radius: 8px;
-      padding: 10px 0;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      z-index: 999;
     }
 
     .menu a {
@@ -163,25 +100,42 @@
   </style>
 </head>
 <body>
-  <header>
-    <h1>YANZX STOREE</h1>
-    <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
-    <div class="menu" id="menu">
-      <a href="#beranda">Beranda</a>
-      <a href="#hubungi">Hubungi Penjual</a>
+
+  <!-- Menu icon -->
+  <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+  <div class="menu" id="menu">
+    <a href="#top">Beranda</a>
+    <a href="#hubungi">Hubungi Penjual</a>
+  </div>
+
+  <!-- Konten -->
+  <div class="container" id="top">
+    <h1><span>HAI!</span><br>SAYA YANZXSTOREE.</h1>
+    <div class="dotted"></div>
+    <p>Saya adalah seorang pengusaha sekaligus penjual online yang berdomisili di Jawa Tengah. Saya fokus di bidang <strong>jual beli akun</strong>, mulai dari akun media sosial, akun game, hingga akun platform lainnya yang terpercaya dan siap pakai.</p>
+    <p>Dengan pengalaman lebih dari 4 tahun di dunia digital, saya telah membantu ribuan pelanggan mendapatkan akun yang sesuai kebutuhan mereka, baik untuk keperluan bisnis, branding, maupun hobi.</p>
+    <p>Saya selalu mengutamakan <strong>keamanan, keaslian, dan kenyamanan transaksi</strong>, sehingga para pelanggan bisa merasa tenang dan puas dalam setiap pembelian.</p>
+    <p>Selain menjual, saya juga menyediakan layanan konsultasi untuk membantu pelanggan memilih akun yang tepat sesuai tujuan mereka. Saya aktif bekerja sama dengan berbagai marketplace, forum, dan platform digital terpercaya, serta terus memperluas jaringan agar dapat menjangkau lebih banyak pelanggan di seluruh Indonesia.</p>
+    
+    <div class="photo">
+      <img src="https://files.catbox.moe/ci91jn.jpg" alt="Yanzxstoree">
     </div>
-  </header>
 
-  <!-- Konten utama -->
-  <section id="beranda" style="padding: 20px;">
-    <h2>Hai! Saya Yanzxstoree.</h2>
-    <p>Konten perkenalan kamu di sini...</p>
-  </section>
-
-  <section id="hubungi" style="padding: 20px;">
-    <h2>Hubungi Penjual</h2>
-    <p>Masukkan detail kontak di sini atau link ke Instagram / WhatsApp.</p>
-  </section>
+    <div class="social-links" id="hubungi">
+      <div class="social-item">
+        <p>INSTAGRAM</p>
+        <a href="https://instagram.com/yanzxstoree1" target="_blank">
+          <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram">
+        </a>
+      </div>
+      <div class="social-item">
+        <p>WHATSAPP</p>
+        <a href="https://wa.me/6288221494446" target="_blank">
+          <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+        </a>
+      </div>
+    </div>
+  </div>
 
   <script>
     function toggleMenu() {
