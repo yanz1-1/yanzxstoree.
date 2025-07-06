@@ -2,23 +2,49 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>Yanzxstoree</title>
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
     }
+    header {
+      background-color: orange;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .menu-icon {
+      font-size: 24px;
+      cursor: pointer;
+    }
+    .nav-menu {
+      display: none;
+      flex-direction: column;
+      background-color: #333;
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      padding: 10px;
+      border-radius: 8px;
+    }
+    .nav-menu a {
+      color: white;
+      text-decoration: none;
+      margin: 5px 0;
+    }
     .section {
-      padding: 50px 20px;
+      padding: 40px 20px;
       text-align: center;
     }
     .intro {
       background-color: orange;
-      color: black;
     }
-    .musik {
+    .music {
       background-color: #fbe9d0;
+      display: none;
     }
     h1 span {
       color: red;
@@ -27,12 +53,21 @@
 </head>
 <body>
 
-  <div class="section intro">
+  <header>
+    <div>Yanzxstoree</div>
+    <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+    <div class="nav-menu" id="navMenu">
+      <a href="#" onclick="showSection('intro')">Home</a>
+      <a href="#" onclick="showSection('music')">Musik</a>
+    </div>
+  </header>
+
+  <div class="section intro" id="intro">
     <h1><span>HAI!</span> SAYA YANZXSTOREE.</h1>
     <p>Saya adalah seorang pengusaha sekaligus penjual online yang berdomisili di Jawa Tengah. Saya fokus di bidang jual beli akun, mulai dari akun sosmed hingga marketplace.</p>
   </div>
 
-  <div class="section musik">
+  <div class="section music" id="music">
     <h2>Musik Favorit</h2>
     <p>Nikmati lagu favorit sambil menjelajahi halaman ini!</p>
     <iframe style="border-radius:12px" 
@@ -45,6 +80,29 @@
       loading="lazy">
     </iframe>
   </div>
+
+  <script>
+    function toggleMenu() {
+      var menu = document.getElementById('navMenu');
+      if (menu.style.display === "flex") {
+        menu.style.display = "none";
+      } else {
+        menu.style.display = "flex";
+      }
+    }
+
+    function showSection(section) {
+      document.getElementById('intro').style.display = 'none';
+      document.getElementById('music').style.display = 'none';
+      document.getElementById(section).style.display = 'block';
+      
+      // Sembunyikan menu setelah klik
+      document.getElementById('navMenu').style.display = 'none';
+    }
+
+    // Default tampilkan home
+    showSection('intro');
+  </script>
 
 </body>
 </html>
