@@ -43,7 +43,7 @@
     .menu-icon {
       position: absolute;
       top: 20px;
-      left: 20px; /* Pindah ke kiri */
+      left: 20px;
       cursor: pointer;
       z-index: 999;
     }
@@ -54,7 +54,7 @@
     .dropdown-menu {
       display: none;
       position: absolute;
-      left: 20px; /* Ikut kiri */
+      left: 20px;
       top: 60px;
       background-color: #333;
       border-radius: 5px;
@@ -83,6 +83,18 @@
       border-radius: 12px;
       margin-top: 20px;
     }
+    .product-image {
+      max-width: 100%;
+      border-radius: 10px;
+      margin-top: 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+    .product-description {
+      margin-top: 10px;
+      text-align: left;
+      font-size: 14px;
+      line-height: 1.6;
+    }
   </style>
 </head>
 <body>
@@ -94,6 +106,7 @@
     <a href="#" onclick="showSection('home')"><i class="fas fa-home"></i>Beranda</a>
     <a href="#" onclick="showSection('toko')"><i class="fas fa-store"></i>Toko</a>
     <a href="#" onclick="showSection('musik')"><i class="fas fa-music"></i>Musik</a>
+    <a href="#" onclick="showSection('hubungi')"><i class="fas fa-phone"></i>Hubungi Penjual</a>
   </div>
 
   <!-- Beranda -->
@@ -126,8 +139,10 @@
     </header>
     <div class="content">
       <p>Selamat datang di halaman toko!</p>
-      <p>Di sini tersedia berbagai akun media sosial, game, dan lainnya.</p>
-      <p>Hubungi saya untuk info lebih lanjut.</p>
+      <img class="product-image" src="https://img1.pixhost.to/images/7026/619372201_danxyhosting.jpg" alt="Produk Toko">
+      <div class="product-description">
+        STOK PRIBADI LOG GGL BIND KOSONG ALL AMAN FREE CEIN BERGARANSI SHOTGUN 2 LUMUT EVO GUN TW MAX 2 VAULT 272 SET BUDI ON SEPATU LETDA ADA 3 KATANA ON BANDEL PARADOX ON ANIMASI BERUBAH ON ANIMASI MASUK LOBY ON TINJU ON NYEKER ON EMOT KURSI RAJA ON EMOT BENDERA OLD ON
+      </div>
     </div>
   </section>
 
@@ -142,6 +157,25 @@
     </div>
   </section>
 
+  <!-- Hubungi Penjual -->
+  <section id="hubungi">
+    <header>
+      <h1><span>HUBUNGI</span><br>PENJUAL</h1>
+    </header>
+    <div class="content">
+      <p>Jika Anda ingin bertanya atau konsultasi, silakan hubungi saya melalui:</p>
+      <div class="social-links">
+        <div class="social-item">
+          <a href="https://wa.me/6288221494446" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp"></a>
+        </div>
+        <div class="social-item">
+          <a href="https://instagram.com/yanzxstoree1" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram"></a>
+        </div>
+      </div>
+      <p>Atau bisa langsung kirim email ke: <strong>yanzxstoree@gmail.com</strong></p>
+    </div>
+  </section>
+
   <script>
     function toggleMenu() {
       var menu = document.getElementById("menu");
@@ -152,7 +186,6 @@
       var sections = document.querySelectorAll('section');
       sections.forEach(sec => sec.classList.remove('active'));
       document.getElementById(id).classList.add('active');
-      // Tutup menu setelah klik
       document.getElementById("menu").style.display = "none";
     }
   </script>
