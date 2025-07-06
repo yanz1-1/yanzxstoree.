@@ -18,6 +18,13 @@
     header h1 span {
       color: red;
     }
+    header h1 {
+      font-size: 36px;
+    }
+    header h2 {
+      font-size: 24px;
+      margin-top: 0;
+    }
     .content {
       max-width: 700px;
       margin: 0 auto;
@@ -32,21 +39,21 @@
     .social-links {
       display: flex;
       justify-content: center;
-      gap: 40px;
+      gap: 20px;
       margin-top: 10px;
     }
     .social-item {
       text-align: center;
     }
-    .social-item p {
-      margin: 5px 0;
-      font-weight: bold;
-      font-size: 14px;
-    }
     .social-item a img {
       width: 40px;
       height: 40px;
     }
+    .social-item p {
+      margin: 5px 0 0 0;
+      font-weight: bold;
+    }
+    /* Hamburger */
     .menu-icon {
       position: absolute;
       top: 20px;
@@ -73,11 +80,10 @@
       padding: 15px 20px;
       text-decoration: none;
       color: white;
-      font-size: 18px;
+      font-size: 20px;
     }
     .dropdown-menu a i {
       margin-right: 10px;
-      font-size: 20px;
     }
     .dropdown-menu a:hover {
       background-color: #555;
@@ -88,21 +94,24 @@
     section.active {
       display: block;
     }
-    iframe {
-      border-radius: 12px;
-      margin-top: 20px;
+    .music-container {
+      background-color: #fcefd4;
+      text-align: center;
+      padding: 30px 20px;
     }
-    .product-image {
-      max-width: 100%;
+    .shop-container {
+      text-align: center;
+      padding: 30px 20px;
+    }
+    .shop-container img {
+      max-width: 300px;
       border-radius: 10px;
-      margin-top: 20px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
     }
-    .product-description {
-      margin-top: 10px;
-      text-align: left;
-      font-size: 14px;
-      line-height: 1.6;
+    .shop-container p {
+      margin-top: 15px;
+      text-align: center;
+      font-weight: bold;
     }
   </style>
 </head>
@@ -113,81 +122,57 @@
   </div>
   <div class="dropdown-menu" id="menu">
     <a href="#" onclick="showSection('home')"><i class="fas fa-home"></i>Beranda</a>
-    <a href="#" onclick="showSection('toko')"><i class="fas fa-store"></i>Toko</a>
-    <a href="#" onclick="showSection('musik')"><i class="fas fa-music"></i>Musik</a>
-    <a href="#" onclick="showSection('hubungi')"><i class="fas fa-phone"></i>Hubungi Penjual</a>
+    <a href="#" onclick="showSection('shop')"><i class="fas fa-store"></i>Toko</a>
+    <a href="#" onclick="showSection('music')"><i class="fas fa-music"></i>Musik</a>
+    <a href="mailto:yanzx46khususjb@gmail.com"><i class="fas fa-envelope"></i>Hubungi Penjual</a>
   </div>
 
-  <!-- Beranda -->
+  <!-- Beranda Section -->
   <section id="home" class="active">
     <header>
       <h1><span>HAI!</span><br>SAYA YANZXSTOREE.</h1>
     </header>
     <div class="content">
-      <p>Saya adalah seorang pengusaha sekaligus penjual online yang berdomisili di Jawa Tengah. Saya fokus di bidang <strong>jual beli akun</strong>.</p>
-      <p>Dengan pengalaman lebih dari 4 tahun di dunia digital, saya telah membantu ribuan pelanggan mendapatkan akun yang sesuai kebutuhan mereka.</p>
-      <p>Saya selalu mengutamakan <strong>keamanan, keaslian, dan kenyamanan transaksi</strong>.</p>
+      <p>Saya adalah seorang pengusaha sekaligus penjual online yang berdomisili di Jawa Tengah. Saya fokus di bidang <strong>jual beli akun</strong>, mulai dari akun media sosial, akun game, hingga akun platform lainnya yang terpercaya dan siap pakai.</p>
+      <p>Dengan pengalaman lebih dari 4 tahun di dunia digital, saya telah membantu ribuan pelanggan mendapatkan akun yang sesuai kebutuhan mereka, baik untuk keperluan bisnis, branding, maupun hobi.</p>
+      <p>Saya selalu mengutamakan <strong>keamanan, keaslian, dan kenyamanan transaksi</strong>, sehingga para pelanggan bisa merasa tenang dan puas dalam setiap pembelian.</p>
+      <p>Selain menjual, saya juga menyediakan layanan konsultasi untuk membantu pelanggan memilih akun yang tepat sesuai tujuan mereka. Saya aktif bekerja sama dengan berbagai marketplace, forum, dan platform digital terpercaya, serta terus memperluas jaringan agar dapat menjangkau lebih banyak pelanggan di seluruh Indonesia.</p>
       <div class="photo">
         <img src="https://files.catbox.moe/ci91jn.jpg" alt="Yanzxstoree">
       </div>
       <div class="social-links">
         <div class="social-item">
-          <p>INSTAGRAM</p>
           <a href="https://instagram.com/yanzxstoree1" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram"></a>
+          <p>INSTAGRAM</p>
         </div>
         <div class="social-item">
-          <p>WHATSAPP</p>
           <a href="https://wa.me/6288221494446" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp"></a>
+          <p>WHATSAPP</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Toko -->
-  <section id="toko">
+  <!-- Toko Section -->
+  <section id="shop">
     <header>
-      <h1><span>TOKO</span><br>YANZXSTOREE.</h1>
+      <h1><span>Selamat Datang Di Toko</span></h1>
+      <h2>Yanzx Storee</h2>
     </header>
-    <div class="content">
-      <h2>Selamat Datang Di Toko</h2>
-      <h3>Yanzx Storee</h3>
-      <p>Selamat datang di halaman toko!</p>
-      <img class="product-image" src="https://img1.pixhost.to/images/7026/619372201_danxyhosting.jpg" alt="Produk Toko">
-      <div class="product-description">
-        STOK PRIBADI LOG GGL BIND KOSONG ALL AMAN FREE CEIN BERGARANSI SHOTGUN 2 LUMUT EVO GUN TW MAX 2 VAULT 272 SET BUDI ON SEPATU LETDA ADA 3 KATANA ON BANDEL PARADOX ON ANIMASI BERUBAH ON ANIMASI MASUK LOBY ON TINJU ON NYEKER ON EMOT KURSI RAJA ON EMOT BENDERA OLD ON
-      </div>
+    <div class="shop-container">
+      <img src="https://img1.pixhost.to/images/7026/619372201_danxyhosting.jpg" alt="Produk Toko">
+      <p>STOK PRIBADI LOG GGL BIND KOSONG ALL AMAN FREE CEIN BERGARANSI SHOTGUN 2 LUMUT EVO GUN TW MAX 2 VAULT 272 SET BUDI ON SEPATU LETDA ADA 3 KATANA ON BANDEL PARADOX ON ANIMASI BERUBAH ON ANIMASI MASUK LOBY ON TINJU ON NYEKER ON EMOT KURSI RAJA ON EMOT BENDERA OLD ON</p>
     </div>
   </section>
 
-  <!-- Musik -->
-  <section id="musik">
+  <!-- Musik Section -->
+  <section id="music">
     <header>
       <h1><span>MUSIK</span><br>YANZXSTOREE.</h1>
     </header>
-    <div class="content">
-      <p>Nikmati playlist favorit sambil menjelajahi produk!</p>
+    <p style="text-align:center;">Nikmati playlist favorit sambil menjelajahi produk!</p>
+    <div class="music-container">
       <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/1uD6gTpns6ksm0aqbFJymJ?utm_source=generator" width="100%" height="380" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
-    </div>
-  </section>
-
-  <!-- Hubungi Penjual -->
-  <section id="hubungi">
-    <header>
-      <h1><span>HUBUNGI</span><br>PENJUAL</h1>
-    </header>
-    <div class="content">
-      <p>Jika Anda ingin bertanya atau konsultasi, silakan hubungi saya melalui:</p>
-      <div class="social-links">
-        <div class="social-item">
-          <p>WHATSAPP</p>
-          <a href="https://wa.me/6288221494446" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp"></a>
-        </div>
-        <div class="social-item">
-          <p>INSTAGRAM</p>
-          <a href="https://instagram.com/yanzxstoree1" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram"></a>
-        </div>
-      </div>
-      <p>Atau bisa langsung kirim email ke: <strong>yanzxstoree@gmail.com</strong></p>
     </div>
   </section>
 
@@ -196,11 +181,12 @@
       var menu = document.getElementById("menu");
       menu.style.display = (menu.style.display === "block") ? "none" : "block";
     }
-
-    function showSection(id) {
-      var sections = document.querySelectorAll('section');
-      sections.forEach(sec => sec.classList.remove('active'));
-      document.getElementById(id).classList.add('active');
+    function showSection(sectionId) {
+      var sections = document.querySelectorAll("section");
+      sections.forEach(function(section) {
+        section.classList.remove("active");
+      });
+      document.getElementById(sectionId).classList.add("active");
       document.getElementById("menu").style.display = "none";
     }
   </script>
